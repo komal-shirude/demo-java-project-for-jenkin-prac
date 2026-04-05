@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven'      // configure in Jenkins (Global Tool Config)
-        jdk 'java21'        // or JDK17/21 based on your setup
+        maven 'maven'
+        jdk 'java21'   // change if you're using JDK17 or 21
     }
 
     environment {
@@ -15,7 +15,8 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/komal-shirude/demo-java-project-for-jenkin-prac.git'
+                git branch: 'main',
+                    url: 'https://github.com/komal-shirude/demo-java-project-for-jenkin-prac.git'
             }
         }
 
