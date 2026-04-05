@@ -8,12 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/komal-shirude/demo-java-project-for-jenkin-prac.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 bat 'mvn clean compile'
