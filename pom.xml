@@ -49,6 +49,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>demo-java</finalName>
     <plugins>
         <plugin>
             <artifactId>maven-war-plugin</artifactId>
